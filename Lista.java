@@ -10,6 +10,7 @@ class Lista{
        //l1_03();
        //l1_04();
        //l1_05();
+       l1_06();
        //l1_07()
        //l1_40();
        //l2_01();
@@ -106,7 +107,24 @@ class Lista{
             imprimirMensagem("O valor da conversão em real é: R$" + valorConversao);
          }
     }
+    /*Escreva um algoritmo que receba um valor que foi depositado em uma conta
+    poupança e exiba o valor com rendimento após um mês. Considere fixo o
+    juro da conta poupança em 0,70% a.m. */
+    static void l1_06(){
+        try (Scanner scanner = new Scanner(System.in)) {
+            imprimirMensagem("Digite o valor do deposito na conta poupança: R$");
+            double valorDepositado = scanner.nextDouble();
 
+            double taxaJuros = 0.007;
+
+            double valorRendimento = valorDepositado * (1 + taxaJuros);
+
+            imprimirMensagem("O valor com rendimento após um mês é: " + valorRendimento);
+        }
+    }
+    /*A Loja Mamão com Açúcar está vendendo seus produtos em 5 (cinco)
+    prestações sem juros. Faça um algoritmo que receba um valor de uma
+    compra e mostre o valor das prestações. */
     static void l1_07(){
         imprimirMensagem("Sistema da loja Mamão com Açucar!");
        //metodo retorna um doble
