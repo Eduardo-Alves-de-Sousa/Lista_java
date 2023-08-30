@@ -10,8 +10,9 @@ class Lista{
        //l1_03();
        //l1_04();
        //l1_05();
-       l1_06();
-       //l1_07()
+       //l1_06();
+       //l1_07();
+       //l1_08();
        //l1_40();
        //l2_01();
     }
@@ -133,6 +134,22 @@ class Lista{
        String prestacao = df.format(valorDaPrestacao);
        imprimirMensagem("O valor de cada prestação sera: " + prestacao + "\n");
        imprimirMensagem("tchuss");
+    }
+    /*Faça um algoritmo que receba o preço de custo de um produto e mostre o
+    valor de venda. Sabe-se que o preço de custo receberá um acréscimo de 
+    acordo com um percentual informado pelo usuário. */
+    static void l1_08(){
+         try (Scanner scanner = new Scanner(System.in)) {
+            imprimirMensagem("Digite o preço de custo do produto: ");
+            double precoCusto = scanner.nextDouble();
+            imprimirMensagem("Digite o percentual de acréscimo: ");
+            double precentualAcrescimo = scanner.nextDouble();
+
+            double acrecimo = 1 + (precentualAcrescimo / 100);
+            double valorVenda = precoCusto * acrecimo;
+
+            imprimirMensagem("O valor de venda do produto com acrescimo sera de : " + valorVenda);
+         }    
     }
 
     static void l1_40(){
