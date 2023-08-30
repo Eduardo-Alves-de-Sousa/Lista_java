@@ -13,6 +13,7 @@ class Lista{
        //l1_06();
        //l1_07();
        //l1_08();
+       //l1_09();
        //l1_40();
        //l2_01();
     }
@@ -150,6 +151,26 @@ class Lista{
 
             imprimirMensagem("O valor de venda do produto com acrescimo sera de : " + valorVenda);
          }    
+    }
+    /*O custo ao consumidor de um carro novo é a soma do custo de fábrica com
+    a percentagem do distribuidor e dos impostos (aplicados, primeiro os impostos 
+    sobre o custo de fábrica, e depois a percentagem do distribuidor sobre o resultado). 
+    Supondo que a percentagem do distribuidor seja de 28% e os impostos 45%. Escrever um 
+    algoritmo que leia o custo de fábrica de um carro e informe o custo ao consumidor do mesmo. */
+    static void l1_09(){
+        try (Scanner scanner = new Scanner(System.in)) {
+            imprimirMensagem("Digite o custo de fábrica: ");
+            double custoFabrica = scanner.nextDouble();
+
+            double percentualDistribuidor = 0.28;
+            double imposto = 0.45;
+
+            double valorImposto = custoFabrica * imposto;
+            double custoConsumidor = custoFabrica + valorImposto;
+            custoConsumidor += custoConsumidor * percentualDistribuidor;
+
+            imprimirMensagem("O custo ao consumidor é: " + custoConsumidor);
+        }
     }
 
     static void l1_40(){
