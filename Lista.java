@@ -161,12 +161,16 @@ class Lista{
         try (Scanner scanner = new Scanner(System.in)) {
             imprimirMensagem("Digite o custo de fábrica: ");
             double custoFabrica = scanner.nextDouble();
-
+            //Define o percentual que o distribuidor adiciona ao custo do carro (28%).
             double percentualDistribuidor = 0.28;
+            //Define o percentual de imposto (45%).
             double imposto = 0.45;
 
+            // Calcula o valor do imposto baseado no custo de fábrica.
             double valorImposto = custoFabrica * imposto;
+            //Calcula o custo ao consumidor somando o custo de fábrica e o valor do imposto.
             double custoConsumidor = custoFabrica + valorImposto;
+            //Adiciona ao custo ao consumidor o valor correspondente ao percentual do distribuidor.
             custoConsumidor += custoConsumidor * percentualDistribuidor;
 
             imprimirMensagem("O custo ao consumidor é: " + custoConsumidor);
