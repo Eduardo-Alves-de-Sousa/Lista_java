@@ -1,3 +1,4 @@
+package Lista_01;
 public class Lampada {
     boolean ligado;
 
