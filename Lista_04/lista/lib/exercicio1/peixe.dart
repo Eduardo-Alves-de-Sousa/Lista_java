@@ -10,6 +10,7 @@ class Peixe extends Animal {
   Peixe(String nome, double peso, this._tipoHabitat) : super(nome, peso);
 
   // Getter para o tipo de habitat do peixe.
+  // ignore: unnecessary_getters_setters
   TipoHabitat get tipoHabitat => _tipoHabitat;
 
   // Setter para o tipo de habitat do peixe.

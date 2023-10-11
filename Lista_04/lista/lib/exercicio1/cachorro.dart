@@ -7,6 +7,7 @@ class Cachorro extends Animal {
   Cachorro(String nome, double peso, this._raca) : super(nome, peso);
 
   // Getter para a raça
+  // ignore: unnecessary_getters_setters
   String get raca => _raca;
 
   // Setter para a raça
